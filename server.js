@@ -10,7 +10,7 @@ const RSA_PRIVATE_FILENAME = 'rsa.priv';
 const RSA_PUBLIC_FILENAME = 'rsa.pub';
 const UUID_FILENAME = 'uuid.json';
 
-const playerUUID = JSON.parse(fs.readyFileSync(UUID_FILENAME)) || {};
+const playerUUID = JSON.parse(fs.readFileSync(UUID_FILENAME)) || {};
 
 const loadRSAKeys = () => {
   if (fs.existsSync(RSA_PRIVATE_FILENAME) && fs.existsSync(RSA_PUBLIC_FILENAME)) {
