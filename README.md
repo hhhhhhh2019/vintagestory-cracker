@@ -1,3 +1,11 @@
+Вам понадобится:
+    [NodeJS](https://nodejs.org)
+    [OpenSSL](https://slproweb.com/products/Win32OpenSSL.html)
+
+вы также можете поставить их обоих используя системный пакетный менеджер(на windows также есть winget)
+
+на Linux вам также потребуется `perl`, но он вероятно уже и так установлен
+
 добавляете в `hosts`(см. гугл) что-то такое
 ```
 127.0.0.1 auth3.vintagestory.at
