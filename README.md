@@ -5,7 +5,7 @@
 
 после генерируете сертификат для сервера
 ```console
-openssl req -x509 -newkey rsa:2048 -nodes -sha256 -subj '/CN=api.vintagestory.at' -keyout private-key.pem -out certificate.pem
+openssl req -x509 -newkey rsa:2048 -nodes -sha256 -subj '/CN=auth3.vintagestory.at' -keyout private-key.pem -out certificate.pem
 ```
 
 добавляете его в доверенные в системе(см. гугл) или (если на linux flatpak) можно добавить переменную окружения для vintagestory

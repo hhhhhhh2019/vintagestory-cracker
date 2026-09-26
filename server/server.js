@@ -58,6 +58,10 @@ const loadRSA = () => {
 }
 
 const { publicKey, privateKey } = loadRSA();
+
+if (!existsSync(UUID_FILENAME)) {
+  writeFileSync(UUID_FILENAME, '{}');
+}
 const playerUUID = JSON.parse(readFileSync(UUID_FILENAME)) || {};
 
 const createSession = (email) => {
