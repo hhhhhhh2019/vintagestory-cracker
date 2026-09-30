@@ -18,7 +18,7 @@ openssl req -x509 -newkey rsa:2048 -nodes -sha256 -subj '/CN=auth3.vintagestory.
 
 добавляете его в доверенные в системе(см. гугл) или (если на linux flatpak) можно добавить переменную окружения для vintagestory
 ```console
-flatpak override --user --SSL_CERT_FILE=/путь/до/certificate.pem --filesystem=/путь/до/папки/где/лежит/certificate.pem at.vintagestory.VintageStory
+flatpak override --user --env=SSL_CERT_FILE=/путь/до/certificate.pem --filesystem=/путь/до/папки/где/лежит/certificate.pem at.vintagestory.VintageStory
 ```
 
 запускаете сервер первый раз
