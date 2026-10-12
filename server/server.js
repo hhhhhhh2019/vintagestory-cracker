@@ -130,6 +130,7 @@ const server = createServer({
 
   if (req.method == 'POST' && req.url == '/v2.1/clientrequestmptoken') {
     res.end(JSON.stringify({
+      valid: 1,
       mptoken: randomUUID()
     }));
   }
