@@ -1,6 +1,6 @@
-import { readFileSync, writeFileSync, existsSync } from "node:fs"
-import { createServer } from "node:https"
-import { generateKeyPairSync, createPublicKey, sign, constants, randomUUID } from "node:crypto"
+const { readFileSync, writeFileSync, existsSync } = require("fs")
+const { createServer } = require("node:https")
+const { generateKeyPairSync, createPublicKey, sign, constants, randomUUID } = require("node:crypto")
 
 const TLS_KEY_FILENAME = 'private-key.pem';
 const TLS_CERT_FILENAME = 'certificate.pem';
@@ -126,6 +126,12 @@ const server = createServer({
         ...createSession(email)
       }));
     });
+  }
+
+  if (req.method == 'POST' && req.url == '/v2.1/clientrequestmptoken') {
+    res.end(JSON.stringify({
+      mptoken: randomUUID()
+    }));
   }
 });
 
